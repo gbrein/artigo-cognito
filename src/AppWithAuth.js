@@ -1,8 +1,9 @@
 import React from "react";
-import { Authenticator } from "aws-amplify-react";
+import { Authenticator, SignIn } from "aws-amplify-react";
 import amplify_config from "./AmplifyConfig";
 import Amplify from "aws-amplify";
 import App from "./App";
+import {CustomSignIn} from './views/SignIn'
 import { I18n } from "aws-amplify";
 
 Amplify.configure(amplify_config);
@@ -23,7 +24,8 @@ const customTheme = {
 
 const AppWithAuth = props => {
   return (
-    <Authenticator theme={customTheme} authState="signIn">
+    <Authenticator hide={[SignIn]} theme={customTheme} authState="signIn">
+      <CustomSignIn />
       <App />
     </Authenticator>
   );
