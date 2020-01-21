@@ -1,14 +1,15 @@
 import React from 'react';
-
+import {BrowserRouter as Router} from 'react-router-dom'
+import Routes from './Routes';
 import './App.css';
 
 function App(props) {
-  const {authState} = props;
+  const {authState, authData} = props;
 
   const loged = (    
-      <div className="App">
-        Página depois do Login
-      </div>
+      <Router>
+        <Routes authState={authState} authData={authData} />
+      </Router>
     )
 
   const logoff = (

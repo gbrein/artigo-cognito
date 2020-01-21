@@ -1,0 +1,20 @@
+{
+    "artigo": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-artigo-cognito-artigo-155428-authRole",
+            "UnauthRoleArn": "arn:aws:iam::531992368366:role/amplify-artigo-cognito-artigo-155428-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::531992368366:role/amplify-artigo-cognito-artigo-155428-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-artigo-cognito-artigo-155428-deployment",
+            "UnauthRoleName": "amplify-artigo-cognito-artigo-155428-unauthRole",
+            "StackName": "amplify-artigo-cognito-artigo-155428",
+            "StackId": "arn:aws:cloudformation:us-east-1:531992368366:stack/amplify-artigo-cognito-artigo-155428/12647650-3c77-11ea-8478-0e24761bd22a",
+            "AmplifyAppId": "d37sepankabxrw"
+        },
+        "categories": {
+            "auth": {
+                "artigocognito456e31d4": {}
+            }
+        }
+    }
+}

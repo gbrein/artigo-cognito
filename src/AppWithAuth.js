@@ -1,14 +1,13 @@
 import React from "react";
 import { Authenticator, SignIn, SignUp } from "aws-amplify-react";
-import amplify_config from "./AmplifyConfig";
 import App from "./App";
 import Amplify from 'aws-amplify'
 import { CustomSignIn } from "./views/SignIn";
 import { CustomSignUp } from "./views/SignUp";
 import { I18n } from "aws-amplify";
+import awsmobile from './aws-exports'
 
-
-Amplify.configure(amplify_config);
+Amplify.configure(awsmobile);
 
 const customLabels = {
   en: {
@@ -26,7 +25,7 @@ const customTheme = {
 
 const AppWithAuth = props => {
   return (
-    <Authenticator hide={[SignIn]} theme={customTheme} authState="signIn">
+    <Authenticator hide={[SignIn, SignUp]} theme={customTheme} authState="signIn">
       <CustomSignIn />
       <CustomSignUp />
       <App />
