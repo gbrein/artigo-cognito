@@ -1,9 +1,0 @@
-{
-	"auth": {
-		"artigocognito456e31d4": {
-			"service": "Cognito",
-			"providerPlugin": "awscloudformation",
-			"dependsOn": []
-		}
-	}
-}
