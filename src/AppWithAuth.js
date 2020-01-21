@@ -1,17 +1,19 @@
 import React from "react";
-import { Authenticator, SignIn } from "aws-amplify-react";
+import { Authenticator, SignIn, SignUp } from "aws-amplify-react";
 import amplify_config from "./AmplifyConfig";
-import Amplify from "aws-amplify";
 import App from "./App";
-import {CustomSignIn} from './views/SignIn'
+import Amplify from 'aws-amplify'
+import { CustomSignIn } from "./views/SignIn";
+import { CustomSignUp } from "./views/SignUp";
 import { I18n } from "aws-amplify";
+
 
 Amplify.configure(amplify_config);
 
 const customLabels = {
   en: {
     "Sign in to your account": "Entrar com a sua conta",
-    'Username': "Nome de Usuário"
+    Username: "Nome de Usuário"
   }
 };
 
@@ -26,6 +28,7 @@ const AppWithAuth = props => {
   return (
     <Authenticator hide={[SignIn]} theme={customTheme} authState="signIn">
       <CustomSignIn />
+      <CustomSignUp />
       <App />
     </Authenticator>
   );
